@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Gift</string>
+    <string name="login_form">LOGIN FORM</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="search">Search</string>
+    <string name="add_information">Add Information</string>
+    <string name="edit_information">Edit Information</string>
+    <string name="delete_information">Delete Information</string>
+    <string name="view_information">View Information</string>
+    <string name="family_name">Family Name</string>
+    <string name="name">Name</string>
+    <string name="city_town_village">City/Town/Village</string>
+    <string name="presents">Presents</string>
+    <string name="id">Id</string>
+    <string name="edit_info">EDIT INFORMATION</string>
+    <string name="delete_info">DELETE INFORMATION</string>
+    <string name="add_info">ADD INFORMATION</string>
+    <string name="pre">Presents</string>
+    <string name="city_town">City/Town</string>
+    <string name="fam_name">Family Name</string>
+    <string name="na">Name</string>
+    <string name="no">No</string>
+    <string name="add_in">Add Info</string>
+    <string name="edit_in">Edit Info</string>
+    <string name="delete_in">Delete Info</string>
+</resources>

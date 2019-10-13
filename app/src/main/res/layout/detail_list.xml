@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="3dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tno"
+                android:layout_marginLeft="3dp"
+                android:layout_marginStart="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/no"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                tools:targetApi="jelly_bean" />
+
+            <TextView
+                android:id="@+id/tName"
+                android:layout_marginLeft="3dp"
+                android:layout_marginStart="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/na"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                tools:targetApi="jelly_bean" />
+
+            <TextView
+                android:id="@+id/tFamily"
+                android:layout_marginLeft="3dp"
+                android:layout_marginStart="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/fam_name"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                tools:targetApi="jelly_bean" />
+
+            <TextView
+                android:id="@+id/tCity"
+                android:layout_marginLeft="3dp"
+                android:layout_marginStart="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/city_town"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                tools:targetApi="jelly_bean" />
+
+            <TextView
+                android:id="@+id/tPresent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginStart="3dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/pre"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                tools:targetApi="jelly_bean" />
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
