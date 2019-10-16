@@ -12,7 +12,7 @@
     <string name="family_name">Family Name</string>
     <string name="name">Name</string>
     <string name="city_town_village">City/Town/Village</string>
-    <string name="presents">Presents</string>
+    <string name="presents">Cash/Gold</string>
     <string name="id">Id</string>
     <string name="edit_info">EDIT INFORMATION</string>
     <string name="delete_info">DELETE INFORMATION</string>
@@ -25,4 +25,11 @@
     <string name="add_in">Add Info</string>
     <string name="edit_in">Edit Info</string>
     <string name="delete_in">Delete Info</string>
+    <string name="no_will">no will</string>
+    <string name="name_will">name will</string>
+    <string name="fam_will">fam will</string>
+    <string name="city_will">city will</string>
+    <string name="pre_will">pre will</string>
+    <string name="colon">:</string>
+    <string name="may_the_years_ahead_be_filled_with_lasting_joy">May the years ahead be filled with lasting joy.</string>
 </resources>

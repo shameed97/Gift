@@ -1,18 +1,17 @@
 package com.example.gift;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
 import android.util.Log;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class BackgroundTask extends AsyncTask<String, detail, String> {
 
@@ -21,6 +20,7 @@ public class BackgroundTask extends AsyncTask<String, detail, String> {
     private ListviewAdapter listviewAdapter;
     private ListView list;
     private android.widget.SearchView searchView;
+    //private ArrayList<detail> listdetail = new ArrayList<>();
 
     BackgroundTask(Context context) {
         this.ctx = context;
@@ -33,6 +33,7 @@ public class BackgroundTask extends AsyncTask<String, detail, String> {
         super.onPreExecute();
     }
 
+    @SuppressLint("WrongThread")
     @Override
     protected String doInBackground(String... params) {
 
@@ -64,11 +65,12 @@ public class BackgroundTask extends AsyncTask<String, detail, String> {
             giftDb.close();
             return "row_deleted";
         } else if (method.equals("get_info")) {
-            searchView=activity.findViewById(R.id.search);
+            searchView = activity.findViewById(R.id.search);
             list = activity.findViewById(R.id.listView);
             SQLiteDatabase database = giftDb.getReadableDatabase();
             Cursor cursor = giftDb.readContacts(database);
-            listviewAdapter = new ListviewAdapter(ctx, R.layout.detail_list);
+            final ArrayList<detail> li = new ArrayList<>();
+            listviewAdapter = new ListviewAdapter(ctx, R.layout.detail_list, li);
             String name, fam, city, pre;
             int id;
             while ((cursor.moveToNext())) {
@@ -77,8 +79,32 @@ public class BackgroundTask extends AsyncTask<String, detail, String> {
                 fam = cursor.getString(cursor.getColumnIndex(DbContract.giftCon.FAM_NAME));
                 city = cursor.getString(cursor.getColumnIndex(DbContract.giftCon.CITY));
                 pre = cursor.getString(cursor.getColumnIndex(DbContract.giftCon.PRESENTS));
-                detail det = new detail("Name  :" + name, "Family :" + fam, "City      :" + city, "Gift       :" + pre, id);
+                detail det = new detail(name, fam, city, pre, id);
                 publishProgress(det);
+
+                searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+
+                    @Override
+                    public boolean onQueryTextSubmit(String s) {
+                        return false;
+                    }
+
+                    @Override
+                    public boolean onQueryTextChange(String s) {
+                        s = s.toLowerCase();
+                        ArrayList<detail> newList = new ArrayList<>();
+                        for (detail det : li) {
+                            String name = det.getName().toLowerCase();
+                            Log.d("sha",s);
+                                if (name.contains(s)) {
+                                newList.add(det);
+                            }
+                        }
+                        ((ListviewAdapter) list.getAdapter()).update(newList);
+                        return false;
+
+                    }
+                });
             }
             return "get_Info";
 
@@ -102,8 +128,11 @@ public class BackgroundTask extends AsyncTask<String, detail, String> {
     }
 
     @Override
-    protected void onProgressUpdate(detail... values) {
+    protected void onProgressUpdate(final detail... values) {
         listviewAdapter.add(values[0]);
+
+
     }
+
 
 }

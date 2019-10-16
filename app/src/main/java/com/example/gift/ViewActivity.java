@@ -24,6 +24,5 @@ public class ViewActivity extends AppCompatActivity {
 
         BackgroundTask backgroundTask = new BackgroundTask(this);
         backgroundTask.execute("get_info");
-
     }
 }

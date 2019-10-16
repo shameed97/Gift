@@ -13,17 +13,13 @@
         android:layout_height="200dp"
         android:background="@color/colorPrimary">
 
-        <SearchView
-            android:id="@+id/search"
-            android:layout_width="match_parent"
-            android:background="@color/white"
-            android:queryHint="@string/search"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:iconifiedByDefault="false"
-            android:layout_height="wrap_content"/>
-
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/amount"
+            android:tint="@color/white"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -31,11 +27,10 @@
             android:layout_marginTop="150dp"
             android:layout_centerHorizontal="true"
             android:fontFamily="sans-serif-medium"
-            android:text="May the years ahead be filled with lasting joy."
+            android:text="@string/may_the_years_ahead_be_filled_with_lasting_joy"
             android:textColor="@color/white"
             android:textSize="17sp"
             tools:targetApi="jelly_bean" />
-
 
     </RelativeLayout>
     <ImageView
@@ -79,6 +74,7 @@
             android:text="@string/add_information"
             tools:targetApi="jelly_bean"
             android:onClick="addInfo"/>
+
         <Button
 
             android:layout_width="160dp"
@@ -129,9 +125,7 @@
                 tools:targetApi="jelly_bean"
                 android:layout_marginStart="1dp" />
 
-
         </LinearLayout>
-
 
     </androidx.cardview.widget.CardView>
 

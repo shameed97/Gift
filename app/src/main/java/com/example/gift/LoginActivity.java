@@ -40,7 +40,7 @@ public class LoginActivity extends AppCompatActivity {
             builder.setMessage("Please Fill All The Fields...");
             displayAlerts("input_error");
         }
-        else if (username.equals("123") && password.equals("123")) {
+        else if (username.equals("Username") && password.equals("Password")) {
             builder.setTitle("Login Information :");
             builder.setMessage("Login Successful Welcome " + username);
             displayAlerts("Login Success...");

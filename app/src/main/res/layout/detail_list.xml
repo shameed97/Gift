@@ -29,70 +29,221 @@
             android:background="@color/colorPrimary"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/tno"
-                android:layout_marginLeft="3dp"
-                android:layout_marginStart="3dp"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:fontFamily="sans-serif-medium"
-                android:text="@string/no"
-                android:textColor="@color/white"
-                android:textSize="22sp"
-                tools:targetApi="jelly_bean" />
+                android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/tName"
-                android:layout_marginLeft="3dp"
-                android:layout_marginStart="3dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:fontFamily="sans-serif-medium"
-                android:text="@string/na"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                tools:targetApi="jelly_bean" />
+                <TextView
+                    android:layout_width="122dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/no"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    tools:targetApi="jelly_bean" />
 
-            <TextView
-                android:id="@+id/tFamily"
-                android:layout_marginLeft="3dp"
-                android:layout_marginStart="3dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:fontFamily="sans-serif-medium"
-                android:text="@string/fam_name"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                tools:targetApi="jelly_bean" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/colon"
+                    android:textColor="@color/white"
+                    android:textSize="19sp"
+                    tools:targetApi="jelly_bean" />
 
-            <TextView
-                android:id="@+id/tCity"
-                android:layout_marginLeft="3dp"
-                android:layout_marginStart="3dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:fontFamily="sans-serif-medium"
-                android:text="@string/city_town"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                tools:targetApi="jelly_bean" />
+                <TextView
+                    android:id="@+id/tno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/no_will"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    tools:targetApi="jelly_bean" />
+            </LinearLayout>
 
-            <TextView
-                android:id="@+id/tPresent"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="3dp"
-                android:layout_marginStart="3dp"
-                android:fontFamily="sans-serif-medium"
-                android:text="@string/pre"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                tools:targetApi="jelly_bean" />
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="122dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/na"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    tools:targetApi="jelly_bean" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/colon"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    tools:targetApi="jelly_bean" />
+
+                <TextView
+                    android:id="@+id/tName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/name_will"
+                    android:textColor="@color/white"
+                    android:textSize="19sp"
+                    tools:targetApi="jelly_bean" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="122dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/fam_name"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    tools:targetApi="jelly_bean" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/colon"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    tools:targetApi="jelly_bean" />
+
+                <TextView
+                    android:id="@+id/tFamily"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/fam_will"
+                    android:textColor="@color/white"
+                    android:textSize="19sp"
+                    tools:targetApi="jelly_bean" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="122dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/city_town"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    tools:targetApi="jelly_bean" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/colon"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    tools:targetApi="jelly_bean" />
+
+                <TextView
+                    android:id="@+id/tCity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/city_will"
+                    android:textColor="@color/white"
+                    android:textSize="19sp"
+                    tools:targetApi="jelly_bean" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="122dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/pre"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    tools:targetApi="jelly_bean" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/colon"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    tools:targetApi="jelly_bean" />
+
+                <TextView
+                    android:id="@+id/tPresent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/pre_will"
+                    android:textColor="@color/white"
+                    android:textSize="19sp"
+                    tools:targetApi="jelly_bean" />
+            </LinearLayout>
+
 
         </LinearLayout>
 

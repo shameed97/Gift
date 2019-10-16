@@ -13,16 +13,18 @@ import java.util.List;
 
 public class ListviewAdapter extends ArrayAdapter {
 
-    private List list = new ArrayList();
+    private ArrayList<detail> list = new ArrayList<>();
 
-    public ListviewAdapter(Context context, int resource) {
+    public ListviewAdapter(Context context, int resource, ArrayList<detail> list) {
         super(context, resource);
+        this.list = list;
     }
 
 
-    public void add(detail object) {
+    public List<String> add(detail object) {
         list.add(object);
         super.add(object);
+        return null;
     }
 
     @Override
@@ -35,6 +37,10 @@ public class ListviewAdapter extends ArrayAdapter {
         return super.clone();
     }
 
+    @Override
+    public void notifyDataSetChanged() {
+        super.notifyDataSetChanged();
+    }
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -73,5 +79,11 @@ public class ListviewAdapter extends ArrayAdapter {
 
     static class ProductHolder {
         TextView tx_id, tx_name, tx_fam, tx_city, tx_pre;
+    }
+
+    public void update(ArrayList<detail> newList) {
+        list = new ArrayList<>();
+        list.addAll(newList);
+        notifyDataSetChanged();
     }
 }
