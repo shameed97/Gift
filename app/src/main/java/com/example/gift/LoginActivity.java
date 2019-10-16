@@ -1,9 +1,5 @@
 package com.example.gift;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,18 +8,20 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
 public class LoginActivity extends AppCompatActivity {
 
     private EditText EditUser, EditPass;
     private AlertDialog.Builder builder;
-    private CardView cardView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        cardView=findViewById(R.id.card);
         EditUser = findViewById(R.id.editUser);
         EditPass = findViewById(R.id.editPass);
         builder = new AlertDialog.Builder(this);
@@ -32,22 +30,19 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void signIn(View view) {
-        Log.d("sha","Its Working...");
+        Log.d("sha", "Its Working...");
         String username = EditUser.getText().toString();
         String password = EditPass.getText().toString();
         if (username.equals("") || password.equals("")) {
             builder.setTitle("Something Went Wrong...");
             builder.setMessage("Please Fill All The Fields...");
             displayAlerts("input_error");
-        }
-        else if (username.equals("Username") && password.equals("Password")) {
+        } else if (username.equals("Username") && password.equals("Password")) {
             builder.setTitle("Login Information :");
             builder.setMessage("Login Successful Welcome " + username);
             displayAlerts("Login Success...");
 
-        }
-        else
-        {
+        } else {
             builder.setTitle("Login Information :");
             builder.setMessage("Login Failed,Please Try Again Later...");
             displayAlerts("Login Failed...");
