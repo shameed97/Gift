@@ -95,8 +95,8 @@ public class BackgroundTask extends AsyncTask<String, detail, String> {
                         ArrayList<detail> newList = new ArrayList<>();
                         for (detail det : li) {
                             String name = det.getName().toLowerCase();
-                            Log.d("sha",s);
-                                if (name.contains(s)) {
+                            Log.d("sha", s);
+                            if (name.contains(s)) {
                                 newList.add(det);
                             }
                         }

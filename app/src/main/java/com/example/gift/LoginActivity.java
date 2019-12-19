@@ -39,7 +39,7 @@ public class LoginActivity extends AppCompatActivity {
             displayAlerts("input_error");
         } else if (username.equals("Username") && password.equals("Password")) {
             builder.setTitle("Login Information :");
-            builder.setMessage("Login Successful Welcome " + username);
+            builder.setMessage("\t\tLogin Successful Welcome ");
             displayAlerts("Login Success...");
 
         } else {

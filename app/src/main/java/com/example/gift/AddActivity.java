@@ -1,6 +1,7 @@
 package com.example.gift;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
@@ -37,7 +38,7 @@ public class AddActivity extends AppCompatActivity {
         String city = editCity.getText().toString();
         String present = editPresent.getText().toString();
         BackgroundTask backgroundTask = new BackgroundTask(this);
-        backgroundTask.execute("add_info", F_name, name, city, present);
+        backgroundTask.execute("add_info", name, F_name, city, present);
         editName.setText("");
         editFam.setText("");
         editCity.setText("");
